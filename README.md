@@ -1,4 +1,4 @@
-# liujip0-web-template
+# liujip0-web-frontend-template
 
 Full-stack template with the web technologies that I currently like right now. Really nothing else to it!
 
