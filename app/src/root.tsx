@@ -1,5 +1,4 @@
 import "@material-symbols/font-400";
-import { QueryClientProvider } from "@tanstack/react-query";
 import {
   isRouteErrorResponse,
   Links,
@@ -13,7 +12,6 @@ import {
 import type { Route } from "./+types/root";
 import "./index.css";
 import styles from "./root.module.css";
-import { queryClient } from "./trpc.ts";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const meta: MetaFunction = () => {
@@ -48,9 +46,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <QueryClientProvider client={queryClient}>
-          {children}
-        </QueryClientProvider>
+        {children}
         <ScrollRestoration />
         <Scripts />
       </body>
